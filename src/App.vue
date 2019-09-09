@@ -1,29 +1,51 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div class="home">
+    <Home />
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+
+
+let request = new XMLHttpRequest()
+request.open('get','http://jack.com:8002/xxx')
+request.send()
+request.onreadystatechange = ()=>{
+  if(request.readyState === 4){
+    if(request.status >=200 && request.status < 300){
+      let str = request.responseText
+      let obj = window.JSON.parse(str) 
     }
   }
+} 
+
+let xml = new XMLHttpRequest()
+xml.open('get', 'www.baidu.com')
+xml.send()
+xml.onreadystatechange = () => {
+  if (xml.status >= 200 && xml.status < 300) {
+    let str = request.responseText
+    let obj = window.JSON.parse(str)
+  }
 }
-</style>
+
+
+
+import Home from "@/components/Home";
+
+export default {
+  name: "App",
+  components: {
+    Home
+  },
+  created() {
+  },
+  data() {
+    return {
+    };
+  },
+  methods: {
+   
+  }
+};
+</script>
