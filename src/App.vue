@@ -19,16 +19,6 @@ request.onreadystatechange = ()=>{
   }
 } 
 
-let xml = new XMLHttpRequest()
-xml.open('get', 'www.baidu.com')
-xml.send()
-xml.onreadystatechange = () => {
-  if (xml.status >= 200 && xml.status < 300) {
-    let str = request.responseText
-    let obj = window.JSON.parse(str)
-  }
-}
-
 
 
 import Home from "@/components/Home";

@@ -6,6 +6,12 @@ import axios from "./lib/axios"
 
 Vue.config.productionTip = false
 
+import {Tabbar, TabbarItem} from 'vant'
+
+Vue
+.use(Tabbar)
+.use(TabbarItem);
+
 Vue.prototype.axios = axios;
 
 //vant 按需引用

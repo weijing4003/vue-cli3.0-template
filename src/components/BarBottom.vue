@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/index">
+    <!-- <router-link to="/index">
       <label>首页</label>
     </router-link>
     <router-link to="/find">
@@ -11,16 +11,61 @@
     </router-link>
     <router-link to="/my">
       <label>我的</label>
-    </router-link>
+    </router-link> -->
+
+<van-tabbar v-model="active">
+      <van-tabbar-item info="3">
+    <span>首页</span>
+    <img
+      slot="icon"
+      slot-scope="props"
+      :src="props.active ? icon.active : icon.normal"
+    >
+  </van-tabbar-item>
+
+  <van-tabbar-item info="3">
+    <span>发现</span>
+    <img
+      slot="icon"
+      slot-scope="props"
+      :src="props.active ? icon.active : icon.normal"
+    >
+  </van-tabbar-item>
+
+  <van-tabbar-item info="3">
+    <span>订单</span>
+    <img
+      slot="icon"
+      slot-scope="props"
+      :src="props.active ? icon.active : icon.normal"
+    >
+  </van-tabbar-item>
+
+  <van-tabbar-item info="3">
+    <span>我的</span>
+    <img
+      slot="icon"
+      slot-scope="props"
+      :src="props.active ? icon.active : icon.normal"
+    >
+  </van-tabbar-item>
+  
+   </van-tabbar>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    msg: String
+  data() {
+    return {
+      active: 0,
+      icon: {
+        normal: '//img.yzcdn.cn/icon-normal.png',
+        active: '//img.yzcdn.cn/icon-active.png'
+      }
+    }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
