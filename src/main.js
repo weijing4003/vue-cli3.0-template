@@ -3,14 +3,17 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import axios from "./lib/axios"
+import './mock/mock.js'
+
 
 Vue.config.productionTip = false
 
-import {Tabbar, TabbarItem} from 'vant'
+import { Tabbar, TabbarItem } from 'vant'
 
 Vue
 .use(Tabbar)
 .use(TabbarItem);
+
 
 Vue.prototype.axios = axios;
 

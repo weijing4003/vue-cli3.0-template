@@ -1,13 +1,27 @@
 <template>
-  <div>{{name}}</div>
+  <div>
+    这个一个{{name}}展示页面
+
+  </div>
+
 </template>
 
 <script>
 export default {
+  created() {
+    this.test();
+  },
   data() {
     return {
       name: "首页"
     };
+  },
+  methods: {
+    test() {
+      this.axios.get('/api/users').then((res) => {
+        console.log(res)
+      })
+    }
   }
 };
 </script>

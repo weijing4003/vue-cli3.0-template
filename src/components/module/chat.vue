@@ -6,7 +6,7 @@
 export default {
   data() {
     return {
-      name: "订单"
+      name: "聊天"
     };
   }
 };

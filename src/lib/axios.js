@@ -6,6 +6,7 @@ let options = {
   withCredentials: true, // 发送跨域请求
   headers: {
     post: {'Content-Type': 'application/x-www-form-urlencoded',}, // 设置请求
+    'Access-Control-Allow-Origin': '*'  //跨域设置
 
   }
 }
