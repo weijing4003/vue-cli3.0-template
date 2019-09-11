@@ -1,12 +1,10 @@
 <template>
-  <div>
-    这个一个{{name}}展示页面
-
-  </div>
-
+  <div>这个一个{{name}}展示页面</div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   created() {
     this.test();
@@ -21,6 +19,7 @@ export default {
       this.axios.get('/api/users').then((res) => {
         console.log(res)
       })
+
     }
   }
 };
@@ -28,5 +27,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-
 </style>

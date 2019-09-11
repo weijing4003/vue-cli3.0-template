@@ -23,5 +23,8 @@ const userData = () => {
     users.push(user)
   }
   return users
+  
 }
+console.log(userData)
 Mock.mock('/api/users', userData)
+console.log(1111111)

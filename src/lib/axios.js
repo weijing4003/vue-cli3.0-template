@@ -3,7 +3,7 @@ import axios from 'axios'
 let options = {
   baseURL: 'http://api.com',
   timeout: 5000, // 超时时间
-  withCredentials: true, // 发送跨域请求
+  withCredentials: true, // 发送跨域请求是否需要凭证
   headers: {
     post: {'Content-Type': 'application/x-www-form-urlencoded',}, // 设置请求
     'Access-Control-Allow-Origin': '*'  //跨域设置
