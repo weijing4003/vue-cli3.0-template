@@ -16,7 +16,8 @@ export default {
   },
   methods: {
     test() {
-      this.axios.get('/api/users').then((res) => {
+      this.axios.post('/api/users').then((res) => {
+        console.log(22222222)
         console.log(res)
       })
 

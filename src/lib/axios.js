@@ -5,8 +5,8 @@ let options = {
   timeout: 5000, // 超时时间
   withCredentials: true, // 发送跨域请求是否需要凭证
   headers: {
-    post: {'Content-Type': 'application/x-www-form-urlencoded',}, // 设置请求
-    'Access-Control-Allow-Origin': '*'  //跨域设置
+    post: { 'Content-Type': 'application/x-www-form-urlencoded', }, // 设置请求
+    'Access-Control-Allow-Origin': '*'  //跨域设置 允许所有来源的访问
 
   }
 }
@@ -18,7 +18,7 @@ axiosInstance.interceptors.request.use(function (config) {
 
   // 解决GET请求缓存
   if (config.method === 'get') {
-    config.params = Object.assign({t: + new Date()}, config.params)
+    config.params = Object.assign({ t: + new Date() }, config.params)
   }
 
   if (process.server) {
@@ -58,8 +58,8 @@ axiosInstance.interceptors.response.use(function (response) {
         break
 
       default:
-        console.log(`\x1B[31m=====================> 响应出錯 url:%s================\x1B[39m`,error.config.url)
-        console.log(`\x1B[31mRequest params: %s \x1B[39m\n\n\n`,JSON.stringify(error.config.params))
+        console.log(`\x1B[31m=====================> 响应出錯 url:%s================\x1B[39m`, error.config.url)
+        console.log(`\x1B[31mRequest params: %s \x1B[39m\n\n\n`, JSON.stringify(error.config.params))
     }
   }
   // 对响应错误做点什么
@@ -67,3 +67,5 @@ axiosInstance.interceptors.response.use(function (response) {
 })
 
 export default axiosInstance
+
+
