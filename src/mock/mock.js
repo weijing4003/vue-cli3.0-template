@@ -3,7 +3,7 @@ import Mock from 'mockjs'
 const Random = Mock.Random
 
 // 登录
-Mock.mock('/api/login', 'post', (option) => {
+Mock.mock('/login', 'post', (option) => {
   let { username, password } = JSON.parse(option.body)
   return (username === 'admin' && password === 'admin')
 })
@@ -25,6 +25,8 @@ const userData = () => {
   return users
   
 }
-console.log(userData)
-Mock.mock('/api/users', userData)
-console.log(1111111)
+Mock.mock('/users', userData)
+
+
+
+
