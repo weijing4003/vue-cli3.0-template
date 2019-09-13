@@ -25,8 +25,8 @@ export default {
     test() {
       this.axios.post('/users').then((res) => {
         if (res.status === 200) {
-          var data = res.data;
-          console.log(data)
+          this.data = res.data;
+          console.log(this.data)
         }
       })
 

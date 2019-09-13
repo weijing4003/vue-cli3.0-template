@@ -6,7 +6,10 @@ let options = {
   // withCredentials: true, // 发送跨域请求是否需要凭证
   headers: {
     // post: { 'Content-Type': 'application/x-www-form-urlencoded', }, // 设置请求
-    // 'Access-Control-Allow-Origin': '*'  //跨域设置 允许所有来源的访问
+    'Access-Control-Allow-Origin': '*',  //跨域设置 允许所有来源的访问
+    "access-control-allow-credentials": "true",
+    withCredentials: false
+    // http://localhost:3000
 
   }
 }

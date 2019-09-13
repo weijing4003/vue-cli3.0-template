@@ -2,11 +2,6 @@ import Mock from 'mockjs'
 
 const Random = Mock.Random
 
-// 登录
-Mock.mock('/login', 'post', (option) => {
-  let { username, password } = JSON.parse(option.body)
-  return (username === 'admin' && password === 'admin')
-})
 
 // 用户数据
 const userData = () => {
@@ -26,6 +21,8 @@ const userData = () => {
   
 }
 Mock.mock('/users', userData)
+
+
 
 
 
