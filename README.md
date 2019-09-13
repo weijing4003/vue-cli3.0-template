@@ -1,4 +1,5 @@
 # vue-template
+axios vue-router vuex mockjs 
 
 ## Project setup
 ```
