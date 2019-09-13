@@ -1,5 +1,5 @@
 # vue-template
-axios vue-router vuex mockjs 
+axios vue-router vuex mockjs  vant 库
 
 ## Project setup
 ```
