@@ -1,21 +1,20 @@
 <template>
-  <div>
-    <ul class="item">
-      <li v-for="item in data" :key="item.id">{{item.address}}
-      </li>
-
-    </ul>
+  <div class="wrapper">
+    
+    <NewsList :data = "data"/>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import NewsList from "@/components/NewsList"
 
 export default {
   created() {
     this.test();
   },
   components: {
+    NewsList
   },
   data() {
     return {
@@ -39,9 +38,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-.item {
-  background: #00ff00;
-  height: 300px;
-  width: 100%;
+.wrapper {
+  margin: 20px
 }
+
 </style>

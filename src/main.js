@@ -4,7 +4,9 @@ import router from './router'
 import store from './store'
 import axios from "./lib/axios"
 
-import './mock/mock.js'
+import './mock/mock.js'           // 引入模拟数据
+import './lib/filter/'            // 引入时间日期过滤器
+
 
 
 Vue.config.productionTip = false
