@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="item">
-      <li v-for="item in data" :key="item.id">{{item.address}}<em>{{item.date}}</em>
+      <li v-for="item in data" :key="item.id">{{item.address}}
       </li>
 
     </ul>
@@ -14,6 +14,8 @@ import axios from "axios";
 export default {
   created() {
     this.test();
+  },
+  components: {
   },
   data() {
     return {
