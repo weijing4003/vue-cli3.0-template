@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
-    
+    <div class="content">我的字体是自适应的</div>
     <NewsList :data = "data"/>
+    
   </div>
 </template>
 
@@ -40,6 +41,9 @@ export default {
 <style scoped lang="less">
 .wrapper {
   margin: 20px
+}
+.content {
+  font-size: .373333rem
 }
 
 </style>

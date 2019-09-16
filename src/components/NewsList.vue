@@ -2,8 +2,7 @@
   <div>
     <div v-if="data.length > 0" class="item">
       <ul v-for="item in data" :key="item.id">
-        <li class="item-list">
-          {{item.address}}<time>{{item.date | timeFiler("MM-DD")}}</time>
+        <li class="item-list">{{item.address}}<time>{{item.date | timeFiler("MM-DD")}}</time>
         </li>
       </ul>
     </div>
