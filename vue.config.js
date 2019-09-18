@@ -4,7 +4,7 @@ module.exports = {
   runtimeCompiler: true,
   publicPath: '/', // 设置打包文件相对路径
   devServer: {
-    // port: 9000, //修改端口
+    port: 9000, //修改端口
     // proxy: ''  // 模拟数据不需要
     // proxy: {
     //   '/api': {
